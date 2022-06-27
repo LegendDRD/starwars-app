@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100vw;
+  margin-block: 2rem;
+  gap: 2rem;
+  padding: 10px 100px 60px;
+  background-color: white;
+}
+
+.education-container {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  margin-block: 2rem;
+  padding: 10px 10px 60px 10px;
+
+}
+
+.cardimg {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ece9e6;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+}
+
+/* .card:hover {
+  display: flex;
+  flex-direction: column;
+  width: clamp(30rem, calc(30rem + 3vw), 30rem);
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ece9e6;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+} */
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tag {
+  align-self: flex-start;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-size: 0.75rem;
+}
+
+.tag+.tag {
+  margin-left: 0.5em;
+}
+
+.tag-blue {
+  background: #56ccf2;
+  background: linear-gradient(to bottom, #2f80ed, #56ccf2);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #d1913c;
+  background: linear-gradient(to bottom, #ffd194, #d1913c);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+  background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.tag-green {
+  background: #2dcb3a;
+  background: linear-gradient(to bottom, #3aef43, #2dcb42);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+  justify-content: right;
+}
+
+.user {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info>small {
+  color: #666;
+}
+
+.skillimg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+.skillcard {
+  display: flex;
+  flex-direction: column;
+  width: 9rem;
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+
+}
+
+.skill__body {
+  padding: .3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: center;
+}
+
+.skill__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
+
+.educationimg {
+  max-width: 70%;
+  object-fit: cover;
+}
+
+
+.educationcard {
+  display: flex;
+  overflow: hidden;
+  border-radius: 1em;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+  margin: 20px 150px
+}
+
+.education__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+  align-items: left;
+  width: 75%;
+  padding: 25px 25px;
+}
+
+.education__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+
+.projectscard {
+  display: flex;
+  flex-direction: column;
+  width: clamp(30em, calc(10rem), 12rem);
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #444444;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+  padding: 2rem;
+}
+
+.projects__body {
+  padding: .3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: left;
+}
+
+.projects__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
