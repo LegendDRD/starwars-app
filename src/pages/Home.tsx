@@ -3,14 +3,21 @@ import { useState } from 'react';
 import PeopleGallery from '../components/ImageGallery/PeopleGallery'
 import NavBar from '../components/NavBar'
 import '../theme/core.css'
-import profileImage from '../static/Images/tempDamian.jpg'
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
 export default function Home(props: any) {
 
     return (
         <><NavBar />
             <h1 className="background-image-50">
                 <div className="profile">
-                    <span className="title-name border">SovTech Assignment</span><br /><br />
+                    <Title className="title-name border">SovTech Assignment</Title><br /><br />
                     {/* <img className="profile-image" src={profileImage} alt="Damian" /> */}
                 </div>
             </h1>

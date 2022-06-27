@@ -5,7 +5,7 @@ import '../../theme/core.css'
 // import GalleryModal from './GalleryModal'
 
 import { HashLink as Link } from 'react-router-hash-link';
-export default function ImageCard(props) {
+export default function ImageCard(props: any) {
     const [TagOption, setTagOption] = useState("tag tag-blue");
     const [show, setShow] = useState(false);
 
@@ -36,7 +36,7 @@ export default function ImageCard(props) {
                 </div>
                 <div className="card__footer">
                     <div className="navbtn">
-                        <Link className="navbtnlink" to="/characters" info={props.info}  >View More</Link>
+                        <Link className="navbtnlink" to="/characters"  >View More</Link>
 
                     </div>
                 </div>
