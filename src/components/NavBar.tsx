@@ -13,7 +13,7 @@ export default function NavBar() {
             <NavLinkStyle to="/"> SWAPI Assignment</NavLinkStyle>
 
             <NavMenu >
-                <NavLinkBtnStyle to="/#Characters" className="navlink">
+                <NavLinkBtnStyle to="/#Characters">
                     Characters
                 </NavLinkBtnStyle>
 

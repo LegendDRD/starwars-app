@@ -21,7 +21,7 @@ export const Title = styled.h1`
 export const Background = styled.div`
 background-image: url(${backgrounder});
 position: relative;
-height: 75vh;
+height: 30vh;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;

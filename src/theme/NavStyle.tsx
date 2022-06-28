@@ -24,7 +24,10 @@ text-decoration: none;
 padding: 0 1rem;
 height: 100%;
 cursor: pointer;
-
+&:hover {
+    font-size: larger;
+    color: #2aa6f7
+  }
 `;
 
 
@@ -48,5 +51,63 @@ text-decoration: none;
 padding: 0 1rem;
 height: 100%;
 cursor: pointer;
+&:hover {
+    font-size: larger;
+    color: #2aa6f7
+  }
+
 
 `;
+
+export const NavBtnStyle = styled.div`
+display: flex;
+align-items: center;
+margin-right: 23px;
+border-radius: 10%;
+
+`
+
+export const NavBtnLinkRed = styled.div`
+border-radius: 50px;
+border: 1px solid #1d1d1d !important;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 25px;
+padding-left: 25px;
+color: rgb(7, 7, 7);
+border: none;
+outline: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+
+&:hover {
+
+  transition: all 0.2s ease-in-out;
+  color: #f72a2a;
+  border: 1px solid #f72a2a !important;
+
+}
+`
+export const NavBtnLinkViewMore = styled(HashLink)`
+border-radius: 50px;
+border: 1px solid #1d1d1d !important;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 25px;
+padding-left: 25px;
+color: rgb(7, 7, 7);
+border: none;
+outline: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+
+&:hover {
+
+  transition: all 0.2s ease-in-out;
+  color: #31f72a;
+  border: 1px solid #31f72a !important;
+
+}
+`

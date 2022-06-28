@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 // import { Link, useHistory } from 'react-router-dom';
 import '../../theme/imageCard.css'
 import '../../theme/core.css'
-// import GalleryModal from './GalleryModal'
+
+import { Card } from '../../theme/CardStyle'
+import { NavBtnStyle, NavBtnLinkViewMore } from '../../theme/NavStyle'
 
 import { HashLink as Link } from 'react-router-hash-link';
 export default function ImageCard(props: any) {
@@ -33,10 +35,10 @@ export default function ImageCard(props: any) {
                     {/* <p>{props.info.description}</p> */}
                 </div>
                 <div className="card__footer">
-                    <div className="navbtn">
-                        <Link className="navbtnlink" to="/characters"  >View More</Link>
+                    <NavBtnStyle >
+                        <NavBtnLinkViewMore to="/characters"  >View More</NavBtnLinkViewMore>
 
-                    </div>
+                    </NavBtnStyle>
                 </div>
             </div>
 
