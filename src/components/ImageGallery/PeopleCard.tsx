@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 // import { Link, useHistory } from 'react-router-dom';
+import { Card, CardBody, CardFooter } from '../../theme/CardStyle'
+import { NavBtnStyle, NavBtnLinkViewMore, NavBtnLinkRed } from '../../theme/NavStyle'
+import { current, clear } from '../../features/counter/currentCharacterCache'
+import { useSelector, useDispatch } from 'react-redux'
+
 import '../../theme/imageCard.css'
-import '../../theme/core.css'
 
-import { Card } from '../../theme/CardStyle'
-import { NavBtnStyle, NavBtnLinkViewMore } from '../../theme/NavStyle'
-
-import { HashLink as Link } from 'react-router-hash-link';
 export default function ImageCard(props: any) {
     const [TagOption, setTagOption] = useState("tag tag-blue");
     const [show, setShow] = useState(false);
-    console.log(props)
+    const currentCharacter = useSelector((state: any) => state.currentCharacter.value);
+    const dispatch = useDispatch()
+
     useEffect(() => {
         switch (props.info.gender) {
             case "male": setTagOption('tag tag-blue')
@@ -23,24 +25,19 @@ export default function ImageCard(props: any) {
 
     return (
         <>
-            <div className="card">
-
-                {/* <div className="card__header"> */}
-                {/* <img className='cardimg' src={props.info.image} alt="card__image" width="600" /> */}
-                {/* </div> */}
-
-                <div className="card__body">
+            <Card >
+                <CardBody >
                     <span className={TagOption}>{props.info.gender}</span>
                     <h4>{props.info.name}</h4>
                     {/* <p>{props.info.description}</p> */}
-                </div>
-                <div className="card__footer">
+                </CardBody>
+                <CardFooter>
                     <NavBtnStyle >
-                        <NavBtnLinkViewMore to="/characters"  >View More</NavBtnLinkViewMore>
-
+                        <NavBtnLinkViewMore to="/characters" onClick={() => { dispatch(current(props.info)); }} >View More</NavBtnLinkViewMore>
+                        {/* <NavBtnLinkRed onClick={() => { dispatch(clear()); }}>clear {currentCharacter}</NavBtnLinkRed> */}
                     </NavBtnStyle>
-                </div>
-            </div>
+                </CardFooter>
+            </Card>
 
         </>
     );

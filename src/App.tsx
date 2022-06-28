@@ -3,7 +3,6 @@ import React from 'react';
 import Home from './pages/Home';
 import NotFoundPage from './pages/NotFound';
 import Characters from './pages/Character';
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
