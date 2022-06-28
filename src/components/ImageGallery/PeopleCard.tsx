@@ -28,8 +28,8 @@ export default function ImageCard(props: any) {
             <Card >
                 <CardBody >
                     <span className={TagOption}>{props.info.gender}</span>
-                    <h4>{props.info.name}</h4>
                     {/* <p>{props.info.description}</p> */}
+                    <h4>{props.info.name}</h4>
                 </CardBody>
                 <CardFooter>
                     <NavBtnStyle >

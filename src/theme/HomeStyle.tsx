@@ -16,6 +16,23 @@ export const Title = styled.h1`
     opacity: 80%;
     font-size: 25px;
     letter-spacing: 10px;
+
+    @media screen and (max-width:768px) {
+
+        opacity: 80%;
+        font-size: 32px;
+        position: absolute;
+        left: 0;
+        top: 30%;
+        text-align: center;
+        background-color: #111;
+        color: #fff;
+        padding: 0px;
+        opacity: 80%;
+        font-size: 25px;
+        letter-spacing: 10px;
+      
+        }
 `;
 
 export const Background = styled.div`
@@ -25,4 +42,6 @@ height: 30vh;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+
+
 `;

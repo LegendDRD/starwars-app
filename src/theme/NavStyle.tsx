@@ -13,6 +13,7 @@ text-align: center;
 padding: .5rem;
 z-index: 10;
 
+
 `;
 
 export const NavLinkStyle = styled(NavLink)`
@@ -28,6 +29,8 @@ cursor: pointer;
     font-size: larger;
     color: #2aa6f7
   }
+
+
 `;
 
 
@@ -37,7 +40,8 @@ display: flex;
 align-items: center;
 
 @media screen and (max-width:768px) {
-    display: none;
+  display: flex;
+align-items: center;
 }
 
 `;
@@ -88,6 +92,7 @@ text-decoration: none;
   border: 1px solid #f72a2a !important;
 
 }
+
 `
 export const NavBtnLinkViewMore = styled(HashLink)`
 border-radius: 50px;
@@ -110,4 +115,7 @@ text-decoration: none;
   border: 1px solid #31f72a !important;
 
 }
+
+
+
 `

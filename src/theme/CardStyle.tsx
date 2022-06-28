@@ -12,13 +12,17 @@ box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
 border-radius: 1em;
 background: #ece9e6;
 background: linear-gradient(to right, #ffffff, #ece9e6);
+
+
+
 `
 
 export const CardBody = styled.div`
 padding: 1rem;
 display: flex;
+text-align:center;
 flex-direction: column;
-gap: 0.5rem;
+
 h4 {
     font-size: 1.5rem;
     text-transform: capitalize;
