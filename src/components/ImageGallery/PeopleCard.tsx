@@ -8,31 +8,29 @@ import { HashLink as Link } from 'react-router-hash-link';
 export default function ImageCard(props: any) {
     const [TagOption, setTagOption] = useState("tag tag-blue");
     const [show, setShow] = useState(false);
-
+    console.log(props)
     useEffect(() => {
-        switch (props.info.genre) {
-            case "FPS": setTagOption('tag tag-blue')
+        switch (props.info.gender) {
+            case "male": setTagOption('tag tag-blue')
                 break;
-            case "2D": setTagOption('tag tag-brown')
+            case "female": setTagOption('tag tag-red')
                 break;
-            case "Survival": setTagOption('tag tag-red')
-                break;
-            case "ROUGELIKE": setTagOption('tag tag-green')
-                break;
-            default: setTagOption('tag tag-blue')
+            default: setTagOption('tag tag-brown')
         }
-    }, [props.info.genre]);
+    }, [props.info.gender]);
 
     return (
         <>
             <div className="card">
-                <div className="card__header">
-                    <img className='cardimg' src={props.info.image} alt="card__image" width="600" />
-                </div>
+
+                {/* <div className="card__header"> */}
+                {/* <img className='cardimg' src={props.info.image} alt="card__image" width="600" /> */}
+                {/* </div> */}
+
                 <div className="card__body">
-                    <span className={TagOption}>{props.info.genre}</span>
+                    <span className={TagOption}>{props.info.gender}</span>
                     <h4>{props.info.name}</h4>
-                    <p>{props.info.description}</p>
+                    {/* <p>{props.info.description}</p> */}
                 </div>
                 <div className="card__footer">
                     <div className="navbtn">
