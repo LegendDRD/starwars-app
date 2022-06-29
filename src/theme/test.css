@@ -1,9 +1,3 @@
-@property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
-}
-
 .container {
     background: #2b3150;
     --card-height: 60vh;

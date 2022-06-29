@@ -94,6 +94,30 @@ text-decoration: none;
 }
 
 `
+
+export const NavBtnLinkGreyed = styled.div`
+border-radius: 50px;
+border: 1px solid lightgrey !important;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 25px;
+padding-left: 25px;
+color: rgb(7, 7, 7);
+border: none;
+outline: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+
+&:hover {
+
+  transition: all 0.2s ease-in-out;
+  color:  #94949470;
+  border: 1px solid white !important;
+
+}
+
+`
 export const NavBtnLinkViewMore = styled(HashLink)`
 border-radius: 50px;
 border: 1px solid #1d1d1d !important;

@@ -27,6 +27,26 @@ background-color: white;
     }
 `;
 
+export const SearchContainer = styled.div`
+
+display: grid;
+max-width: 100vw;
+gap:.5rem;
+
+
+@media screen and (max-width:768px) {
+
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100vw;
+    margin-block: 2rem;
+    gap:.5rem;
+    padding: 0px 30px 10px 0px;
+    background-color: white;
+    }
+`;
+
 export const ContainerSearch = styled.div`
 
 display: flex;
