@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { Card, CardBody, CardFooter, CardSelected } from '../../theme/CardStyle'
 import { NavBtnStyle, NavBtnLinkViewMore, NavBtnLinkRed } from '../../theme/NavStyle'
 import { current, clear } from '../../features/counter/currentCharacterCache'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
+
 
 import '../../theme/imageCard.css'
 

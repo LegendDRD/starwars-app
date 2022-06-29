@@ -11,7 +11,7 @@ export default function Home(props: any) {
             <NavBar />
             <Background />
             <Title>SovTech Assignment</Title>
-            <Search />
+            {/* <Search /> */}
             <PeopleGallery />
         </>
     );

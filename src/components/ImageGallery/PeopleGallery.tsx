@@ -7,7 +7,8 @@ import { Container } from '../../theme/GlobalStyle'
 import { NavBtnStyle, NavBtnLinkRed } from '../../theme/NavStyle'
 import { useQuery, gql } from "@apollo/client";
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../../features/counter/counter'
+import { decrement, increment, clear } from '../../features/counter/counter'
+import { store, clearCache } from '../../features/counter/searchCache'
 
 export default function PeopleGallery() {
     const [people, setPeople] = useState([])
@@ -15,25 +16,28 @@ export default function PeopleGallery() {
     const [hasScrolled, sethasScrolled] = useState(false)
     const { id } = useParams();
     const count = useSelector((state: any) => state.counter.value)
+    const searchCache = useSelector((state: any) => state.search.value)
+
+    console.log(searchCache)
+    const [textValue, setTextValue] = useState(searchCache);
 
     const dispatch = useDispatch()
 
     const Get_people = gql`
-    query ListPeople($page: Int) {
-        listPeople(page: $page) {
+    query Query($name: String, $page: Int) {
+        listPeople(name: $name, page: $page) {
           name
           height
           mass
-          birth_year
           gender
           homeworld {
             name
           }
         }
       }
-  
+      
   `;
-    const { loading, error, data, refetch } = useQuery<any>(Get_people, { variables: { page: count } });
+    const { loading, error, data, refetch } = useQuery<any>(Get_people, { variables: { page: count, name: textValue } });
 
     useEffect(() => {
         // if (error) { console.log(error) };
@@ -48,7 +52,7 @@ export default function PeopleGallery() {
 
     useEffect(() => {
         refetch({ page: count })
-    }, [count])
+    }, [count, refetch])
 
     useEffect(() => {
         if (typeof id === 'string' && !loading && !hasScrolled) {
@@ -67,6 +71,8 @@ export default function PeopleGallery() {
     return (
         <>
             <CharacterTitle id="Characters" >Star Wars Characters</CharacterTitle>
+            <input onChange={(event) => { dispatch(clear()); dispatch(store(event.target.value)); setTextValue(event.target.value) }} placeholder="Darth Vader"></input >
+            <button onClick={() => { dispatch(clearCache()); setTextValue("") }}>Clear</button >
             <ul>
                 {(isLoading && !data) ? <Container ><PeopleCardSkeleton /></Container> :
                     <Container>
