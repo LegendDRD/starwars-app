@@ -17,10 +17,7 @@ export default function PeopleGallery() {
     const { id } = useParams();
     const count = useSelector((state: any) => state.counter.value)
     const searchCache = useSelector((state: any) => state.search.value)
-
-    console.log(searchCache)
     const [textValue, setTextValue] = useState(searchCache);
-
     const dispatch = useDispatch()
 
     const Get_people = gql`
