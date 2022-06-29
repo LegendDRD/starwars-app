@@ -1,14 +1,11 @@
-import { NavLink, useParams } from 'react-router-dom';
-import '../theme/test.css'
-import { useSelector, useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 import { ChContainer, BodyContainer, ChCard, ChText, ChName, ChTxtContainer, BtnLinkBack, BtnStyle } from '../theme/CharacterStyle'
 import { CardFooter } from '../theme/CardStyle'
 
 
-export default function Characters(props: any) {
+export default function Characters() {
     const currentCharacter = useSelector((state: any) => state.currentCharacter.value);
-    console.log(currentCharacter)
-
     const { id } = useParams();
 
     return (

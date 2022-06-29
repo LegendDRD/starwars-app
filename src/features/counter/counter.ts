@@ -7,12 +7,12 @@ export const counterSlice = createSlice({
   },
   reducers: {
     increment: state => {
-      console.log(state)
       state.value++
     },
     decrement: state => {
       let temp = state.value;
       if (temp-- < 2) {
+        /* eslint-disable-next-line*/
         state.value = state.value;
       } else {
         state.value--
@@ -27,7 +27,6 @@ export const counterSlice = createSlice({
   }
 })
 
-// Action creators are generated for each case reducer function
 export const { increment, decrement, clear } = counterSlice.actions
 
 export default counterSlice.reducer

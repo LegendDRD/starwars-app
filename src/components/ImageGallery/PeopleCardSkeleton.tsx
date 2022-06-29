@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Card ,CardBody,CardFooter} from '../../theme/CardStyle'
+import { Card, CardBody, CardFooter } from '../../theme/CardStyle'
 import ReactLoading from 'react-loading';
-import { HashLink as Link } from 'react-router-hash-link';
+import { NavBtnStyle } from '../../theme/NavStyle'
 
-import { NavBtnStyle} from '../../theme/NavStyle'
 export default function ImageCardSkeleton() {
 
     return (
@@ -128,7 +126,7 @@ export default function ImageCardSkeleton() {
                     </NavBtnStyle>
                 </CardFooter>
             </Card>
-            
+
 
         </>
     );

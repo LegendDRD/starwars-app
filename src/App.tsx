@@ -1,5 +1,3 @@
-import React from 'react';
-// pages
 import Home from './pages/Home';
 import NotFoundPage from './pages/NotFound';
 import Characters from './pages/Character';

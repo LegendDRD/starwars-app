@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
-// import { Link, useHistory } from 'react-router-dom';
 import { useQuery, gql } from "@apollo/client";
-import { useSelector, useDispatch } from 'react-redux'
 import { CharacterTitle } from '../theme/PeopleGalleryStyle'
 import ImageCard from './ImageGallery/PeopleCard'
-import ImageCardSkeleton from './ImageGallery/PeopleCardSkeleton'
-import { Container, ContainerSearch, SearchBG, UlStyle } from '../theme/GlobalStyle'
+import { ContainerSearch, SearchBG, UlStyle } from '../theme/GlobalStyle'
 import ReactLoading from 'react-loading';
 
 export default function Search() {

@@ -7,7 +7,6 @@ export const currentCharacter = createSlice({
   },
   reducers: {
     current: (state, action) => {
-      console.log();
       state.value = action.payload
     },
     clear: (state) => {
@@ -16,7 +15,6 @@ export const currentCharacter = createSlice({
   }
 })
 
-// Action creators are generated for each case reducer function
 export const { current, clear } = currentCharacter.actions
 
 export default currentCharacter.reducer

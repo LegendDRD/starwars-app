@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-// import { Link, useHistory } from 'react-router-dom';
 import { Card, CardBody, CardFooter, CardSelected } from '../../theme/CardStyle'
-import { NavBtnStyle, NavBtnLinkViewMore, NavBtnLinkRed } from '../../theme/NavStyle'
-import { current, clear } from '../../features/counter/currentCharacterCache'
+import { NavBtnStyle, NavBtnLinkViewMore } from '../../theme/NavStyle'
+import { current } from '../../features/counter/currentCharacterCache'
 import { useDispatch } from 'react-redux'
 
 

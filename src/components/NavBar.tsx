@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavBarStyle, NavLinkStyle, NavMenu, NavLinkBtnStyle } from '../theme/NavStyle'
 
 

@@ -15,7 +15,6 @@ export const searchCharacter = createSlice({
   }
 })
 
-// Action creators are generated for each case reducer function
 export const { store, clearCache } = searchCharacter.actions
 
 export default searchCharacter.reducer

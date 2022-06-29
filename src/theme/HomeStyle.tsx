@@ -1,6 +1,6 @@
-
 import styled from 'styled-components'
 import backgrounder from '../static/Images/image1.png'
+
 export const Title = styled.h1`
     opacity: 80%;
     font-size: 32px;

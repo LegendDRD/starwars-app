@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import backgrounder from '../static/Images/blackholeV1.png'
+
 export const ChContainer = styled.div`
 background-image: url(${backgrounder});
 --card-height: 60vh;
