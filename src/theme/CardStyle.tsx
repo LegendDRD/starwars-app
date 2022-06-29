@@ -12,6 +12,11 @@ box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
 border-radius: 1em;
 background: #ece9e6;
 background: linear-gradient(to right, #ffffff, #ece9e6);
+
+&:hover {
+  background: linear-gradient(to right, #ffffff, #d6d4d2);
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.5);
+}
 `
 
 export const CardSelected = styled.div`

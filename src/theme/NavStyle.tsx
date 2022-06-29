@@ -69,6 +69,7 @@ align-items: center;
 margin-right: 23px;
 border-radius: 10%;
 
+
 `
 
 export const NavBtnLinkRed = styled.div`
@@ -139,7 +140,5 @@ text-decoration: none;
   border: 1px solid #31f72a !important;
 
 }
-
-
 
 `
