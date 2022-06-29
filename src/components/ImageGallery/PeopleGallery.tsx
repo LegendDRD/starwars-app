@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { Link, useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import PeopleCard from './PeopleCard'
 import PeopleCardSkeleton from './PeopleCardSkeleton'
 import { CharacterTitle } from '../../theme/PeopleGalleryStyle'
@@ -12,7 +12,8 @@ import { decrement, increment } from '../../features/counter/counter'
 export default function PeopleGallery() {
     const [people, setPeople] = useState([])
     const [isLoading, setIsLoading] = useState(true)
-
+    const [hasScrolled, sethasScrolled] = useState(false)
+    const { id } = useParams();
     const count = useSelector((state: any) => state.counter.value)
 
     const dispatch = useDispatch()
@@ -48,6 +49,21 @@ export default function PeopleGallery() {
     useEffect(() => {
         refetch({ page: count })
     }, [count])
+
+    useEffect(() => {
+        if (typeof id === 'string' && !loading && !hasScrolled) {
+            scrollTo(id)
+        }
+    }, [id, loading, hasScrolled])
+
+    function scrollTo(id: string) {
+        const characterElement = document.getElementById(id);
+
+        if (!characterElement) return;
+        sethasScrolled(true)
+
+        characterElement.scrollIntoView({ behavior: "smooth" });
+    }
     return (
         <>
             <CharacterTitle id="Characters" >Star Wars Characters</CharacterTitle>
@@ -55,8 +71,9 @@ export default function PeopleGallery() {
                 {(isLoading && !data) ? <Container ><PeopleCardSkeleton /></Container> :
                     <Container>
                         {people.map((item: any, index: any) => {
-
-                            return <PeopleCard info={item} key={index} />
+                            let selected = false;
+                            if (id && id === index + "-" + item.name) { selected = true } else { selected = false; }
+                            return <PeopleCard info={item} key={index} id={index + "-" + item.name} selected={selected} />
                         })}
 
                     </Container>}

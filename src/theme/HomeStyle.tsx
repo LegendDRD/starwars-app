@@ -6,9 +6,8 @@ export const Title = styled.h1`
     font-size: 32px;
     letter-spacing: 10px;
     position: absolute;
-    left: 0;
-    top: 30%;
-    width: 100%;
+    top: 20%;
+    left:38%;
     text-align: center;
     background-color: #111;
     color: #fff;
@@ -45,3 +44,4 @@ background-size: cover;
 
 
 `;
+

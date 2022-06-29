@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { CharacterTitle } from '../theme/PeopleGalleryStyle'
 import ImageCard from './ImageGallery/PeopleCard'
 import ImageCardSkeleton from './ImageGallery/PeopleCardSkeleton'
-import { Container } from '../theme/GlobalStyle'
+import { Container, ContainerSearch, SearchBG, UlStyle } from '../theme/GlobalStyle'
 import ReactLoading from 'react-loading';
 
 export default function Search() {
@@ -44,18 +44,23 @@ export default function Search() {
 
     return (
         <>
-            <CharacterTitle id="Search" >Search For Star Wars</CharacterTitle>
-            <input onChange={(event) => { setTextValue(event.target.value) }} placeholder="Luke"></input >
 
-            <ul>
-                {(isLoading && !data) ? <Container ><ReactLoading type='bubbles' color='black' height={25} width={50} /></Container> :
-                    <Container>
-                        {people.map((item: any, index: any) => {
-                            return <ImageCard info={item} key={index} />
-                        })}
+            <SearchBG>
 
-                    </Container>}
-            </ul>
+                <CharacterTitle id="Search" >Search For Star Wars</CharacterTitle>
+                <input onChange={(event) => { setTextValue(event.target.value) }} placeholder="Luke"></input >
+
+                <UlStyle>
+                    {(isLoading && !data) ? <ContainerSearch ><ReactLoading type='bubbles' color='black' height={25} width={50} /></ContainerSearch> :
+                        <ContainerSearch>
+                            {people.map((item: any, index: any) => {
+                                return <ImageCard info={item} key={index} id={index + "-" + item.name + "-searched"} />
+                            })}
+
+                        </ContainerSearch>}
+                </UlStyle>
+            </SearchBG>
+
         </>
     );
 }

@@ -10,9 +10,9 @@ function App() {
     <>
       <Router>
         <Routes>
-
           <Route path='/' element={<Home />} />
-          <Route path='/Characters' element={<Characters />} />
+          <Route path='/:id' element={<Home />} />
+          <Route path='/characters/:id' element={<Characters />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>

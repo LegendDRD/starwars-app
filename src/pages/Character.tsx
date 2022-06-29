@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 // import { Link, useHistory } from 'react-router-dom';
 import '../theme/test.css'
 import { current, clear } from '../features/counter/currentCharacterCache'
@@ -9,6 +9,8 @@ import { HashLink } from 'react-router-hash-link';
 export default function Characters(props: any) {
     const currentCharacter = useSelector((state: any) => state.currentCharacter.value);
     console.log(currentCharacter)
+
+    const { id } = useParams();
 
     return (
         <>
@@ -21,7 +23,7 @@ export default function Characters(props: any) {
                             <span>{currentCharacter.height}</span>
                             <span>{currentCharacter.mass}</span>
                             <span>{currentCharacter.homeworld.name}</span>
-                            <NavLink to='/#Characters'>back</NavLink>
+                            <NavLink to={`/${id}`}>back</NavLink>
                         </div>
                     </div>
                 </div>
