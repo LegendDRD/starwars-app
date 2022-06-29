@@ -39,7 +39,7 @@ export default function PeopleGallery() {
     useEffect(() => {
 
         (loading && typeof data === 'undefined') ? setIsLoading(loading) : setPeople(data.listPeople); setIsLoading(loading);
-        if (error) console.log(`Error! ${error.message}`);
+        // if (error) console.log(`Error! ${error.message}`);
 
     }, [Get_people, error, loading, data]);
 
