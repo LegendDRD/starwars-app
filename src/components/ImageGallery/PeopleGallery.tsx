@@ -95,7 +95,8 @@ export default function PeopleGallery() {
                 <NavBtnStyle>
                     {(count > 1) ? <NavBtnLinkRed onClick={() => { setIsLoading(true); dispatch(decrement()); }}>Back</NavBtnLinkRed> : <NavBtnLinkGreyed >Back</NavBtnLinkGreyed>}
                     <NextPage>Page {count} </NextPage>
-                    <NavBtnLinkRed onClick={() => { setIsLoading(true); dispatch(increment()); }}>Next</NavBtnLinkRed>
+                    {(count < 9) ? <NavBtnLinkRed onClick={() => { setIsLoading(true); dispatch(increment()); }}>Next</NavBtnLinkRed> : <NavBtnLinkGreyed >Next</NavBtnLinkGreyed>}
+
                 </NavBtnStyle>
             </Container>
         </>
